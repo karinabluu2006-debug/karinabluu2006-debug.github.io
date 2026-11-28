@@ -4,11 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>张贵洋 · Mochi 的房间</title>
-    <meta name="description" content="一个可以点开来看的房间：软件工程 × 视觉叙事 × 独立游戏。" />
-    <link rel="icon" type="image/png" href="mochi/poses/wave.png" />
-    <link rel="apple-touch-icon" href="mochi/poses/wave.png" />
+    <meta
+      name="description"
+      content="一个可以点开来看的房间：软件工程 × 视觉叙事 × 独立游戏。白天写代码，晚上做梦，屋里有一只叫 Mochi 的猫。"
+    />
+    <meta name="author" content="张贵洋" />
+    <meta name="theme-color" content="#0b1110" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ecf2f0" media="(prefers-color-scheme: light)" />
+
+    <!-- 站点图标：像素猫；16/32 用同一张，手机上给 180 的 touch icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="mask-icon" href="favicon-32.png" color="#30d4a8" />
+
+    <!-- 分享预览：微信 / QQ / 微博读 og，Twitter 读 twitter:*。
+         image 必须是绝对地址，统一指向以「以此为准」的 GitHub 版，
+         两个域名分享出去都是这张卡。 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mochi 的房间" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content="张贵洋 · Mochi 的房间" />
+    <meta
+      property="og:description"
+      content="一个可以点开来看的房间：软件工程 × 视觉叙事 × 独立游戏。八件作品、一间能逛的屋子，还有一只叫 Mochi 的猫。"
+    />
+    <meta property="og:url" content="https://karinabluu2006-debug.github.io/" />
+    <meta property="og:image" content="https://karinabluu2006-debug.github.io/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mochi 的房间：夜晚的书桌与窗外的月亮" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="张贵洋 · Mochi 的房间" />
+    <meta
+      name="twitter:description"
+      content="一个可以点开来看的房间：软件工程 × 视觉叙事 × 独立游戏。"
+    />
+    <meta name="twitter:image" content="https://karinabluu2006-debug.github.io/og-cover.jpg" />
+    <link rel="canonical" href="https://karinabluu2006-debug.github.io/" />
+
     <link rel="preload" href="fonts/MatchaStyle.otf" as="font" type="font/otf" crossorigin />
-    <meta name="theme-color" content="#0b1110" />
     <script>
       /* 首屏定主题：和 src/theme.js 的优先级一致，避免开门动画跟整站颜色不一致 */
       (function () {
@@ -22,22 +57,25 @@
             t = s === 'day' || s === 'night' ? s : auto
           }
           document.documentElement.dataset.theme = t
+          document.documentElement.style.colorScheme = t === 'day' ? 'light' : 'dark'
         } catch (e) {}
       })()
     </script>
-    <style>html,body{background:#0b1110;margin:0}:root[data-theme=day] body{background:#ecf2f0}#splash{z-index:9999;color:#e6f0ec;background:#0b1110;flex-direction:column;justify-content:center;align-items:center;gap:16px;font-family:PingFang SC,Microsoft YaHei,system-ui,-apple-system,sans-serif;display:flex;position:fixed;inset:0}:root[data-theme=day] #splash{color:#1a2321;background:#ecf2f0}#splash img{-o-object-fit:contain;object-fit:contain;width:68px;height:68px;image-rendering:pixelated;animation:1.7s ease-in-out infinite sp-bob}#splash .sp-t{letter-spacing:.18em;opacity:.8;margin:0;font-size:14px}#splash .sp-d{vertical-align:1px;gap:4px;margin-left:7px;display:inline-flex}#splash .sp-d i{background:#30d4a8;border-radius:50%;width:4px;height:4px;animation:1.15s ease-in-out infinite sp-dot}:root[data-theme=day] #splash .sp-d i{background:#0d9a7c}#splash .sp-d i:nth-child(2){animation-delay:.16s}#splash .sp-d i:nth-child(3){animation-delay:.32s}#splash .sp-bar{background:#e6f0ec21;border-radius:2px;width:116px;height:2px;overflow:hidden}:root[data-theme=day] #splash .sp-bar{background:#1a23211a}#splash .sp-bar i{background:#30d4a8;border-radius:2px;width:38%;height:100%;animation:1.5s ease-in-out infinite sp-slide;display:block}:root[data-theme=day] #splash .sp-bar i{background:#0d9a7c}#splash .sp-alt{text-align:center;opacity:0;margin:6px 0 0;font-size:12px;line-height:1.7;animation:.5s 6s forwards sp-in}#splash .sp-alt a{color:#30d4a8;border-bottom:1px solid;text-decoration:none}:root[data-theme=day] #splash .sp-alt a{color:#0d9a7c}@keyframes sp-bob{0%,to{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes sp-dot{0%,to{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}@keyframes sp-slide{0%{transform:translate(-120%)}to{transform:translate(300%)}}@keyframes sp-in{to{opacity:.5}}@media (prefers-reduced-motion:reduce){#splash img,#splash .sp-d i,#splash .sp-bar i{animation:none}}</style>
-    <script type="module" crossorigin src="./assets/index-BLCrloW5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-1INoti8B.css">
+    <style>html,body{background:#0b1110;margin:0}:root[data-theme=day] body{background:#ecf2f0}#splash{z-index:9999;color:#e6f0ec;will-change:opacity;background:#0b1110;flex-direction:column;justify-content:center;align-items:center;gap:16px;font-family:PingFang SC,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:opacity .46s cubic-bezier(.22,1,.36,1),visibility .46s;display:flex;position:fixed;inset:0}#splash:before{content:"";pointer-events:none;filter:blur(26px);background:radial-gradient(50% 50%,#30d4a829 0%,#0000 72%);width:min(560px,96vw);height:300px;position:absolute;top:26%;left:50%;translate:-50%}:root[data-theme=day] #splash{color:#1a2321;background:#ecf2f0}:root[data-theme=day] #splash:before{background:radial-gradient(50% 50%,#0d9a7c1f 0%,#0000 72%)}#splash.is-out{opacity:0;visibility:hidden;pointer-events:none}#splash.is-out .sp-stage{transform:translateY(-6px)scale(.985)}#splash .sp-stage{flex-direction:column;align-items:center;gap:16px;transition:transform .46s cubic-bezier(.22,1,.36,1);display:flex;position:relative}#splash img{-o-object-fit:contain;object-fit:contain;width:68px;height:68px;image-rendering:pixelated;animation:1.7s ease-in-out infinite sp-bob}#splash .sp-t{letter-spacing:.18em;opacity:.8;margin:0;font-size:14px}#splash .sp-d{vertical-align:1px;gap:4px;margin-left:7px;display:inline-flex}#splash .sp-d i{background:#30d4a8;border-radius:50%;width:4px;height:4px;animation:1.15s ease-in-out infinite sp-dot}:root[data-theme=day] #splash .sp-d i{background:#0d9a7c}#splash .sp-d i:nth-child(2){animation-delay:.16s}#splash .sp-d i:nth-child(3){animation-delay:.32s}#splash .sp-bar{background:#e6f0ec21;border-radius:2px;width:116px;height:2px;overflow:hidden}:root[data-theme=day] #splash .sp-bar{background:#1a23211a}#splash .sp-bar i{background:#30d4a8;border-radius:2px;width:38%;height:100%;animation:1.5s ease-in-out infinite sp-slide;display:block}:root[data-theme=day] #splash .sp-bar i{background:#0d9a7c}#splash .sp-alt{text-align:center;opacity:0;max-width:86vw;margin:6px 0 0;font-size:12px;line-height:1.7;animation:.5s 6s forwards sp-in;position:relative}#splash .sp-alt a{color:#30d4a8;border-bottom:1px solid;text-decoration:none}:root[data-theme=day] #splash .sp-alt a{color:#0d9a7c}@keyframes sp-bob{0%,to{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes sp-dot{0%,to{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}@keyframes sp-slide{0%{transform:translate(-120%)}to{transform:translate(300%)}}@keyframes sp-in{to{opacity:.5}}@media (prefers-reduced-motion:reduce){#splash,#splash .sp-stage{transition-duration:1ms}#splash img,#splash .sp-d i,#splash .sp-bar i{animation:none}}</style>
+    <script type="module" crossorigin src="./assets/index-Bw22wHPV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BDefnCoc.css">
   </head>
   <body>
-    <div id="root">
-      <!-- React 挂载时会整块替换掉这层「开门动画」，所以它只在首屏加载期间出现 -->
-      <div id="splash">
+    <div id="root"></div>
+    <!-- 开门动画放在 #root 外面：React 挂载不会把它一起清掉，
+         挂载完成后再由 main.jsx 加 .is-out 淡出，避免硬切造成的闪屏 -->
+    <div id="splash">
+      <div class="sp-stage">
         <img src="mochi/poses/wave.png" alt="" />
         <p class="sp-t">正在开门<span class="sp-d"><i></i><i></i><i></i></span></p>
         <div class="sp-bar"><i></i></div>
-        <p class="sp-alt">网络慢的时候要等一会儿，别急着关。<br />实在打不开，<a id="sp-alt-link" href="https://karinabluu2006-debug.github.io/">换个地址试试</a></p>
       </div>
+      <p class="sp-alt">网络慢的时候要等一会儿，别急着关。<br />实在打不开，<a id="sp-alt-link" href="https://karinabluu2006-debug.github.io/">换个地址试试</a></p>
     </div>
     <noscript>
       <p style="padding:40px;font:14px/1.8 system-ui;color:#e6f0ec;background:#0b1110">
